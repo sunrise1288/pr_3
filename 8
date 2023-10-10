@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите натуральное число n: ");
+        int n = scanner.nextInt();
+
+        if (n < 1) {
+            System.out.println("n должно быть натуральным числом.");
+        } else {
+            int sum = calculateSumOfSquares(n);
+            System.out.println("Сумма квадратов натуральных чисел от 1 до " + n + " равна " + sum);
+        }
+    }
+
+    public static int calculateSumOfSquares(int n) {
+        return n * (n + 1) * (2 * n + 1) / 6;
+    }
+}
