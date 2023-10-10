@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите a: ");
+        int a = scanner.nextInt();
+        System.out.print("Введите b (b >= a): ");
+        int b = scanner.nextInt();
+        
+        int count = 0;
+        for (int i = a; i <= b; i++) {
+            if (i % 3 == 0 && i % 5 != 0) {
+                count++;
+            }
+        }
+        
+        System.out.println("Количество чисел кратных 3, но не кратных 5 от " + a + " до " + b + " включительно: " + count);
+    }
+}
