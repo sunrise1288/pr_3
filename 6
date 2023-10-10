@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите a: ");
+        int a = scanner.nextInt();
+        System.out.print("Введите b (b >= a): ");
+        int b = scanner.nextInt();
+
+        System.out.println("Четные числа от " + a + " до " + b + " включительно:");
+
+        for (int i = a; i <= b; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}
