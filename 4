@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double sum = 0;
+        int count = 0;
+
+        System.out.println("Введите действительные числа (введите 0 для завершения):");
+
+        while (true) {
+            double num = scanner.nextDouble();
+
+            if (num == 0) {
+                break;
+            }
+
+            sum += num;
+            count++;
+        }
+
+        double average = sum / count;
+
+        System.out.println("Среднее арифметическое введенных чисел: " + average);
+    }
+}
