@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите последовательность натуральных чисел (введите 0 для завершения):");
+
+        int prev = scanner.nextInt();
+        int count = 0;
+
+        while (true) {
+            int current = scanner.nextInt();
+
+            if (current == 0) {
+                break;
+            }
+
+            if (current > prev) {
+                count++;
+            }
+
+            prev = current;
+        }
+
+        System.out.println("Количество элементов больше предыдущего: " + count);
+    }
+}
